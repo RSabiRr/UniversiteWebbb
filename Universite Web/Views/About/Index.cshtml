@@ -24,10 +24,11 @@
 
             <div class="col-lg-6 content">
                 <h2>
-                    @Model.About.Title
+                    @(Model.About.Title.Length>200? Model.About.Title.Substring(0,200)+"...": Model.About.Title)
                 </h2>
                 <p>
-                  @Model.About.Content
+                    @(Model.About.Title.Length>200? Model.About.Title.Substring(0,200)+"...": Model.About.Title)
+
                 </p>
                 <a href="" class="btn mb-5">daha cox </a>
             </div>

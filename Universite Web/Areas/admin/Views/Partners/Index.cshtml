@@ -24,6 +24,8 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Image)
+                <img src="~/UploadsPatners/@item.Image" class="card-img-top " alt="...">
+
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

@@ -140,37 +140,6 @@ namespace Universite_Web.Areas.admin.Controllers
         {
             return View();
         }
-        [AllowAnonymous]
-        public IActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost,AllowAnonymous]
-        public async Task<IActionResult> Login(VmTeacherLogin model)
-        {
-            var yoxla = _context.CustomUser.Where(m => m.Email == model.Email).Select(i => i.IsAdmin).FirstOrDefault();
-            if (yoxla == false)
-            {
-                var yoxla2 = _context.CustomUser.Where(m => m.Email == model.Email).Select(i => i.IsStudent).FirstOrDefault();
-                if (yoxla2==false)
-                {
-                    var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
-
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("index", "Home");
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("", "Email or password is not valid");
-                        return View(model);
-                    }
-                }
-               
-            }
-
-            return View(model);
-
-        }
+       
     }
 }

@@ -48,7 +48,15 @@ namespace Universite_Web.Controllers
                         return View(model);
                     }
                 }
+                else
+                {
+                    return NotFound(); 
+                }
 
+            }
+            else
+            {
+                return NotFound();
             }
 
             return View(model);
@@ -79,7 +87,7 @@ namespace Universite_Web.Controllers
 
             return View(user);
         }
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> Subject(int id)
         {
             var user = await _context.CustomUser.Include(m => m.Subject)

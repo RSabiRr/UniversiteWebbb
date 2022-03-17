@@ -61,5 +61,6 @@ namespace Universite_Web.ViewModel
         public Subject Subject { get; set; }
         public bool IsAdmin { get; set; } = false;
         public bool IsStudent { get; set; } = true;
+        public CustomUser CustomUser { get; set; }
     }
 }

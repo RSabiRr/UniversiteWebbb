@@ -12,7 +12,7 @@ using Universite_Web.ViewModel;
 namespace Universite_Web.Areas.admin.Controllers
 {
     [Area("admin")]
-    [Authorize]
+   
 
     public class AccountController : Controller
     {
@@ -41,7 +41,7 @@ namespace Universite_Web.Areas.admin.Controllers
                     Email = model.Email,
                     UserName = model.Email,
                     FacultyId = (int?)model.FacultyId,
-                    SpecialtyId = (int?)model.FacultyId,
+                    SpecialtyId = (int?)model.SpecialtyId,
                     EducationSectionId = (int?)model.EducationSectionId,
                     GroupId = (int?)model.GroupId,
                     SubjectId= (int?)model.SubjectId,
@@ -88,8 +88,12 @@ namespace Universite_Web.Areas.admin.Controllers
                             return View(model);
                         }
                     }
-            
-                return View(model);
+                    else
+                    {
+                        return NotFound();
+                    }
+
+            return View(model);
 
         }
 

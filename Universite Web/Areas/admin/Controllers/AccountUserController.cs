@@ -157,11 +157,7 @@ namespace Universite_Web.Areas.admin.Controllers
 
             return View(model);
         }
-        public async Task<IActionResult> Logout()
-        {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("login");
-        }
+        
     }
 }
 

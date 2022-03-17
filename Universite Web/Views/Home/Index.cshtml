@@ -45,9 +45,11 @@
                                 <div class="card">
                                     <img src="~/UploadsBlog/@item.Image" class="card-img-top " alt="...">
                                     <div class="card-body">
-                                        <h5 class="card-title">@item.Title</h5>
+                                        <h5 class="card-title">
+                                            @(item.Title.Length>200? item.Title.Substring(0,200)+"...":item.Title)
+                                        </h5>
                                         <p class="card-text">
-                                            @item.Content
+                                            @(item.Content.Length>200? item.Content.Substring(0,200)+"...":item.Content)
                                         </p>
                                         <a asp-action="BlogDetails" asp-controller="blog" asp-route-id="@item.Id">Etrafli</a>
                                         <div class="date">
@@ -160,19 +162,19 @@
 <!-- ------------ -->
 <section id="video">
     <div class="forvideo" @*style="background-image: url('../../wwwroot/Uploads/@Model.UniverstyVideo.BackImg');*@>
-        <div class="container">
-            <div class="row forcenter">
-                <div class="col-lg-12">
-                    <div class="inside_video">
-                        <h4>Watch Our Univercity Video</h4>
-                        <a data-bs-toggle="modal" data-bs-target="#VmModal" href="">
-                            <i class="fas fa-play"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                                            <div class="container">
+                                                <div class="row forcenter">
+                                                    <div class="col-lg-12">
+                                                        <div class="inside_video">
+                                                            <h4>Watch Our Univercity Video</h4>
+                                                            <a data-bs-toggle="modal" data-bs-target="#VmModal" href="">
+                                                                <i class="fas fa-play"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+</div>
 </section>
 
 

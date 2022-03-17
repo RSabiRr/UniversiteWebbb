@@ -27,20 +27,25 @@
                 <div class="col text-right mt-2">
                     @if (_signInManager.IsSignedIn(User))
                     {
-                        <a class=" btn btn-secondary  ">@_userManager.GetUserName(User)</a>
+                    <div class="d-flex">
+                        <a class=" me-3 " style="text-decoration: none; text-transform: uppercase; color: black">@_userManager.GetUserName(User)</a>
 
-                        <a class="btn btn-secondary mt-1 " asp-controller="userlogin" asp-action="Logout">Logout</a>
+                        <a class=" " style="text-decoration: none; text-transform: uppercase; color: black" asp-area="Universite_Web" asp-controller="userlogin" asp-action="Logout">Logout</a>
 
+                    </div>
+                      
                     }
                     else
                     {
-
-                        <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#myModal" href="" @*asp-controller="AccountUser" asp-action="login"*@>
-                            Giriş
-                        </a>
-                        <a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tModal" href="" @*asp-controller="AccountUser" asp-action="login"*@>
-                            Muellim Ucun Giriş
-                        </a>
+                <div class="d-flex">
+                    <a class=" me-3" style="text-decoration: none; text-transform: uppercase; color: black" data-bs-toggle="modal" data-bs-target="#myModal" href="" @*asp-controller="AccountUser" asp-action="login"*@>
+                        Telebe Üçün  Giriş
+                    </a>
+                    <a class="" style="text-decoration:none;text-transform:uppercase;color:black" data-bs-toggle="modal" data-bs-target="#tModal" href="" @*asp-controller="AccountUser" asp-action="login"*@>
+                        Müellim Üçün  Giriş
+                    </a>
+                </div>
+                        
                     }
 
 

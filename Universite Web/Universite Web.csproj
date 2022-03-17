@@ -16,10 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\UploadsSlider\" />
-    <Folder Include="wwwroot\UploadsSettings\" />
-    <Folder Include="wwwroot\UploadsPatners\" />
     <Folder Include="wwwroot\UploadsAbout\" />
+    <Folder Include="wwwroot\UploadsPatners\" />
+    <Folder Include="wwwroot\UploadsSettings\" />
+    <Folder Include="wwwroot\UploadsSlider\" />
     <Folder Include="wwwroot\Uploadss\" />
     <Folder Include="wwwroot\UploadsBlog\" />
     <Folder Include="wwwroot\Uploads\" />

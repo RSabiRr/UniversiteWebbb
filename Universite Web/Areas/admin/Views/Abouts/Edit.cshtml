@@ -11,8 +11,8 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" method="post" enctype="multipart/form-data" class="text-danger"></div>
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly"  class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
@@ -25,7 +25,7 @@
                 <span asp-validation-for="Content" class="text-danger"></span>
             </div>
             <div class="mb-3">
-                <img src="~/Uploads/@Model.Image" alt="Alternate Text" style="max-width:250px; max-height:350px" />
+                <img src="~/UploadsAbout/@Model.Image" alt="Alternate Text" style="max-width:250px; max-height:350px" />
                 <label asp-for="ImageFile" class="form-label">Image</label>
                 <input class="form-control" asp-for="ImageFile">
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
